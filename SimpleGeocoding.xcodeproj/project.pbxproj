@@ -24,6 +24,7 @@
 		E04B1FC1161A1B5200D805EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1FC0161A1B5200D805EE /* UIKit.framework */; };
 		E04B1FC2161A1B7300D805EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1FC0161A1B5200D805EE /* UIKit.framework */; };
 		E04B1FC3161A1C5200D805EE /* world_geo.json in Resources */ = {isa = PBXBuildFile; fileRef = E04B1FBF161A121A00D805EE /* world_geo.json */; };
+		E04B1FC4161A344900D805EE /* SGCountry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E04B1FBB1619C57C00D805EE /* SGCountry.h */; };
 		E0F9DDEB16172811006325EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDEA16172811006325EF /* Foundation.framework */; };
 		E0F9DDF016172811006325EF /* SimpleGeocoding.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E0F9DDEF16172811006325EF /* SimpleGeocoding.h */; };
 		E0F9DDF216172811006325EF /* SimpleGeocoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F9DDF116172811006325EF /* SimpleGeocoding.m */; };
@@ -53,6 +54,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				E04B1FC4161A344900D805EE /* SGCountry.h in CopyFiles */,
 				E0F9DDF016172811006325EF /* SimpleGeocoding.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,9 +432,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"SQLITE_ENABLE_RTREE=1",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -482,12 +483,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-					"SQLITE_ENABLE_RTREE=1",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
