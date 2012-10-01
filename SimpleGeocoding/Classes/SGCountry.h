@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface SGCountry : NSObject
 {
@@ -19,6 +20,7 @@
 @property (readonly,nonatomic) NSString *alpha_2_code;
 @property (readonly,nonatomic) NSString *alpha_3_code;
 @property (readonly,nonatomic) NSArray *polygons;
+@property (readonly,nonatomic) CGRect boundingBox;
 
 -(BOOL)containsCoordinate:(CLLocationCoordinate2D)coordinate;
 +(SGCountry*)countryForCoordinate:(CLLocationCoordinate2D)coordinate;

@@ -8,10 +8,12 @@
 
 #import "SGCountry.h"
 #import "SimpleGeocoding.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation SGCountry
 @synthesize alpha_2_code, alpha_3_code;
 @synthesize polygons;
+@synthesize boundingBox;
 
 -(id)init
 {
@@ -22,12 +24,29 @@
     return self;
 }
 
+-(void)updateBoundingBox
+{
+    if (polygons.count == 0)
+        return;
+    
+    UIBezierPath *first_polygon = [polygons objectAtIndex:0];
+    CGRect bbox = first_polygon.bounds;
+    
+    for (int i=1; i<polygons.count; ++i)
+    {
+        UIBezierPath *polygon = [polygons objectAtIndex:i];
+        bbox = CGRectUnion(bbox, polygon.bounds);
+    }
+    
+    boundingBox = bbox;
+}
+
 
 -(void)updateWithDictionary:(NSDictionary*)dict
 {
     alpha_2_code = [[dict objectForKey:@"properties"] objectForKey:@"ISO_A2"];
     alpha_3_code = [[dict objectForKey:@"properties"] objectForKey:@"ISO_A3"];
-    NSLog(@"%@", alpha_3_code);
+
     
     [polygons removeAllObjects];
     NSArray *geometry = [[dict objectForKey:@"geometry"] objectForKey:@"coordinates"];
@@ -48,6 +67,8 @@
         [polygon closePath];
         [polygons addObject:polygon];
     }
+    
+    [self updateBoundingBox];
 }
 
 +(SGCountry*)countryWithCountryDict:(NSDictionary*)dictinary
@@ -60,6 +81,11 @@
 -(BOOL)containsCoordinate:(CLLocationCoordinate2D)coordinate
 {
     CGPoint point = CGPointMake(coordinate.longitude, coordinate.latitude);
+    if (!CGRectContainsPoint(boundingBox, point))
+    {
+        return NO;
+    }
+    
     for (UIBezierPath *path in self.polygons)
     {
         if ([path containsPoint:point])

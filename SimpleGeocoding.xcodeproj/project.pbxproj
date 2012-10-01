@@ -21,10 +21,12 @@
 		E04B1FB8161999EE00D805EE /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FAB161999EE00D805EE /* SBJsonUTF8Stream.m */; };
 		E04B1FB9161999EE00D805EE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FAD161999EE00D805EE /* SBJsonWriter.m */; };
 		E04B1FC1161A1B5200D805EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1FC0161A1B5200D805EE /* UIKit.framework */; };
-		E04B1FC2161A1B7300D805EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1FC0161A1B5200D805EE /* UIKit.framework */; };
 		E04B1FC3161A1C5200D805EE /* world_geo.json in Resources */ = {isa = PBXBuildFile; fileRef = E04B1FBF161A121A00D805EE /* world_geo.json */; };
 		E04B1FF6161A3B5100D805EE /* SGCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FF3161A3B5100D805EE /* SGCountry.m */; };
 		E04B1FF7161A3B5100D805EE /* SimpleGeocoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FF5161A3B5100D805EE /* SimpleGeocoding.m */; };
+		E04B29C1161A4D2800D805EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B29BF161A4D0F00D805EE /* QuartzCore.framework */; };
+		E04B29C2161A4F8800D805EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1D931619975600D805EE /* CoreGraphics.framework */; };
+		E04B29C3161A4F9300D805EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1FC0161A1B5200D805EE /* UIKit.framework */; };
 		E0F9DDEB16172811006325EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDEA16172811006325EF /* Foundation.framework */; };
 		E0F9DDFA16172811006325EF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDF916172811006325EF /* SenTestingKit.framework */; };
 		E0F9DDFD16172811006325EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDEA16172811006325EF /* Foundation.framework */; };
@@ -90,6 +92,7 @@
 		E04B1FF3161A3B5100D805EE /* SGCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGCountry.m; path = Classes/SGCountry.m; sourceTree = "<group>"; };
 		E04B1FF4161A3B5100D805EE /* SimpleGeocoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleGeocoding.h; path = Classes/SimpleGeocoding.h; sourceTree = "<group>"; };
 		E04B1FF5161A3B5100D805EE /* SimpleGeocoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleGeocoding.m; path = Classes/SimpleGeocoding.m; sourceTree = "<group>"; };
+		E04B29BF161A4D0F00D805EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E0F9DDE716172811006325EF /* libSimpleGeocoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleGeocoding.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F9DDEA16172811006325EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0F9DDEE16172811006325EF /* SimpleGeocoding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleGeocoding-Prefix.pch"; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04B29C1161A4D2800D805EE /* QuartzCore.framework in Frameworks */,
 				E04B1FC1161A1B5200D805EE /* UIKit.framework in Frameworks */,
 				E04B1D941619975600D805EE /* CoreGraphics.framework in Frameworks */,
 				E0F9DE4516174B27006325EF /* CoreLocation.framework in Frameworks */,
@@ -118,11 +122,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04B1FC2161A1B7300D805EE /* UIKit.framework in Frameworks */,
+				E04B29C3161A4F9300D805EE /* UIKit.framework in Frameworks */,
+				E04B29C2161A4F8800D805EE /* CoreGraphics.framework in Frameworks */,
+				E0F9DE0016172811006325EF /* libSimpleGeocoding.a in Frameworks */,
 				E0F9DE46161751F8006325EF /* CoreLocation.framework in Frameworks */,
 				E0F9DDFA16172811006325EF /* SenTestingKit.framework in Frameworks */,
 				E0F9DDFD16172811006325EF /* Foundation.framework in Frameworks */,
-				E0F9DE0016172811006325EF /* libSimpleGeocoding.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +216,7 @@
 		E0F9DDE916172811006325EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E04B29BF161A4D0F00D805EE /* QuartzCore.framework */,
 				E04B1FC0161A1B5200D805EE /* UIKit.framework */,
 				E04B1D931619975600D805EE /* CoreGraphics.framework */,
 				E0F9DE4416174B27006325EF /* CoreLocation.framework */,
@@ -444,6 +450,7 @@
 				DSTROOT = /tmp/SimpleGeocoding.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleGeocoding/SimpleGeocoding-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -460,6 +467,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleGeocoding/SimpleGeocoding-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "SimpleGeocodingTests/SimpleGeocodingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -495,6 +503,7 @@
 				DSTROOT = /tmp/SimpleGeocoding.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleGeocoding/SimpleGeocoding-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -511,6 +520,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleGeocoding/SimpleGeocoding-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "SimpleGeocodingTests/SimpleGeocodingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
