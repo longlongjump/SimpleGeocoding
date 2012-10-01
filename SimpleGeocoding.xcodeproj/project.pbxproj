@@ -20,14 +20,12 @@
 		E04B1FB7161999EE00D805EE /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FA9161999EE00D805EE /* SBJsonTokeniser.m */; };
 		E04B1FB8161999EE00D805EE /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FAB161999EE00D805EE /* SBJsonUTF8Stream.m */; };
 		E04B1FB9161999EE00D805EE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FAD161999EE00D805EE /* SBJsonWriter.m */; };
-		E04B1FBD1619C57C00D805EE /* SGCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FBC1619C57C00D805EE /* SGCountry.m */; };
 		E04B1FC1161A1B5200D805EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1FC0161A1B5200D805EE /* UIKit.framework */; };
 		E04B1FC2161A1B7300D805EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B1FC0161A1B5200D805EE /* UIKit.framework */; };
 		E04B1FC3161A1C5200D805EE /* world_geo.json in Resources */ = {isa = PBXBuildFile; fileRef = E04B1FBF161A121A00D805EE /* world_geo.json */; };
-		E04B1FC4161A344900D805EE /* SGCountry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E04B1FBB1619C57C00D805EE /* SGCountry.h */; };
+		E04B1FF6161A3B5100D805EE /* SGCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FF3161A3B5100D805EE /* SGCountry.m */; };
+		E04B1FF7161A3B5100D805EE /* SimpleGeocoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B1FF5161A3B5100D805EE /* SimpleGeocoding.m */; };
 		E0F9DDEB16172811006325EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDEA16172811006325EF /* Foundation.framework */; };
-		E0F9DDF016172811006325EF /* SimpleGeocoding.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E0F9DDEF16172811006325EF /* SimpleGeocoding.h */; };
-		E0F9DDF216172811006325EF /* SimpleGeocoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F9DDF116172811006325EF /* SimpleGeocoding.m */; };
 		E0F9DDFA16172811006325EF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDF916172811006325EF /* SenTestingKit.framework */; };
 		E0F9DDFD16172811006325EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDEA16172811006325EF /* Foundation.framework */; };
 		E0F9DE0016172811006325EF /* libSimpleGeocoding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F9DDE716172811006325EF /* libSimpleGeocoding.a */; };
@@ -54,8 +52,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				E04B1FC4161A344900D805EE /* SGCountry.h in CopyFiles */,
-				E0F9DDF016172811006325EF /* SimpleGeocoding.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,15 +84,15 @@
 		E04B1FAB161999EE00D805EE /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		E04B1FAC161999EE00D805EE /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		E04B1FAD161999EE00D805EE /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		E04B1FBB1619C57C00D805EE /* SGCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGCountry.h; sourceTree = "<group>"; };
-		E04B1FBC1619C57C00D805EE /* SGCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGCountry.m; sourceTree = "<group>"; };
 		E04B1FBF161A121A00D805EE /* world_geo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = world_geo.json; path = SimpleGeocoding/Resources/world_geo.json; sourceTree = SOURCE_ROOT; };
 		E04B1FC0161A1B5200D805EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E04B1FF2161A3B5100D805EE /* SGCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGCountry.h; path = Classes/SGCountry.h; sourceTree = "<group>"; };
+		E04B1FF3161A3B5100D805EE /* SGCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGCountry.m; path = Classes/SGCountry.m; sourceTree = "<group>"; };
+		E04B1FF4161A3B5100D805EE /* SimpleGeocoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleGeocoding.h; path = Classes/SimpleGeocoding.h; sourceTree = "<group>"; };
+		E04B1FF5161A3B5100D805EE /* SimpleGeocoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleGeocoding.m; path = Classes/SimpleGeocoding.m; sourceTree = "<group>"; };
 		E0F9DDE716172811006325EF /* libSimpleGeocoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleGeocoding.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F9DDEA16172811006325EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0F9DDEE16172811006325EF /* SimpleGeocoding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleGeocoding-Prefix.pch"; sourceTree = "<group>"; };
-		E0F9DDEF16172811006325EF /* SimpleGeocoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleGeocoding.h; sourceTree = "<group>"; };
-		E0F9DDF116172811006325EF /* SimpleGeocoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleGeocoding.m; sourceTree = "<group>"; };
 		E0F9DDF816172811006325EF /* SimpleGeocodingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleGeocodingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F9DDF916172811006325EF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E0F9DE0316172811006325EF /* SimpleGeocodingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleGeocodingTests-Info.plist"; sourceTree = "<group>"; };
@@ -174,21 +170,23 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		E04B1FBA1619BE5600D805EE /* Region */ = {
-			isa = PBXGroup;
-			children = (
-				E04B1FBB1619C57C00D805EE /* SGCountry.h */,
-				E04B1FBC1619C57C00D805EE /* SGCountry.m */,
-			);
-			name = Region;
-			sourceTree = "<group>";
-		};
 		E04B1FBE161A120000D805EE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E04B1FBF161A121A00D805EE /* world_geo.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E04B1FF1161A3B3D00D805EE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E04B1FF2161A3B5100D805EE /* SGCountry.h */,
+				E04B1FF3161A3B5100D805EE /* SGCountry.m */,
+				E04B1FF4161A3B5100D805EE /* SimpleGeocoding.h */,
+				E04B1FF5161A3B5100D805EE /* SimpleGeocoding.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		E0F9DDDC16172811006325EF = {
@@ -225,11 +223,9 @@
 		E0F9DDEC16172811006325EF /* SimpleGeocoding */ = {
 			isa = PBXGroup;
 			children = (
+				E04B1FF1161A3B3D00D805EE /* Classes */,
 				E04B1FBE161A120000D805EE /* Resources */,
-				E04B1FBA1619BE5600D805EE /* Region */,
 				E0F9DE1C16173E67006325EF /* libs */,
-				E0F9DDEF16172811006325EF /* SimpleGeocoding.h */,
-				E0F9DDF116172811006325EF /* SimpleGeocoding.m */,
 				E0F9DDED16172811006325EF /* Supporting Files */,
 			);
 			path = SimpleGeocoding;
@@ -369,7 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0F9DDF216172811006325EF /* SimpleGeocoding.m in Sources */,
 				E04B1FAE161999EE00D805EE /* NSObject+SBJson.m in Sources */,
 				E04B1FAF161999EE00D805EE /* SBJsonParser.m in Sources */,
 				E04B1FB0161999EE00D805EE /* SBJsonStreamParser.m in Sources */,
@@ -382,7 +377,8 @@
 				E04B1FB7161999EE00D805EE /* SBJsonTokeniser.m in Sources */,
 				E04B1FB8161999EE00D805EE /* SBJsonUTF8Stream.m in Sources */,
 				E04B1FB9161999EE00D805EE /* SBJsonWriter.m in Sources */,
-				E04B1FBD1619C57C00D805EE /* SGCountry.m in Sources */,
+				E04B1FF6161A3B5100D805EE /* SGCountry.m in Sources */,
+				E04B1FF7161A3B5100D805EE /* SimpleGeocoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
