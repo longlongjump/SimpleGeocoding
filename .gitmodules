@@ -1,0 +1,3 @@
+[submodule "SimpleGeocoding/lib/json-framework"]
+	path = SimpleGeocoding/lib/json-framework
+	url = git://github.com/stig/json-framework.git

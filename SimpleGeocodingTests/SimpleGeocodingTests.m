@@ -7,11 +7,15 @@
 //
 
 #import "SimpleGeocodingTests.h"
+#import "SimpleGeocoding.h"
 
 @implementation SimpleGeocodingTests
 
 - (void)setUp
 {
+    NSString *path = [[NSBundle bundleForClass:NSClassFromString(@"SimpleGeocodingTests")] pathForResource:@"world_geo" ofType:@"json"];
+    [SimpleGeocoding initializeWithPath:path error:nil];
+    
     [super setUp];
     
     // Set-up code here.
@@ -24,9 +28,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+
+-(void)testCountryForCoordinate
 {
-    STFail(@"Unit tests are not implemented yet in SimpleGeocodingTests");
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(46.28, 30.44);
+    SGCountry *country = [SimpleGeocoding countryForCoordinate:coord];
+    STAssertEqualObjects(country.alpha_2_code, @"UA", @"country code should equal Ukraine");
 }
 
 @end
