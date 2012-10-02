@@ -36,4 +36,20 @@
     STAssertEqualObjects(country.alpha_2_code, @"UA", @"country code should equal Ukraine");
 }
 
+-(void)testInnerCountryForCoordinate
+{
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(-29.466667, 27.933333);
+    SGCountry *country = [SimpleGeocoding countryForCoordinate:coord];
+    STAssertEqualObjects(country.alpha_2_code, @"LS", @"country code should equal Lesoto");
+}
+
+
+-(void)testBorderCoordinate
+{
+    
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(18.975, 72.825833);
+    SGCountry *country = [SimpleGeocoding countryForCoordinate:coord];
+    STAssertEqualObjects(country.alpha_3_code, @"IND", @"country code should equal India");
+}
+
 @end

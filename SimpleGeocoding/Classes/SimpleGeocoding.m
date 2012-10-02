@@ -35,7 +35,24 @@ static NSMutableArray *countries = nil;
 
 +(SGCountry*) countryForCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    return [SGCountry countryForCoordinate:coordinate];
+    SGCountry *possible_country = nil;
+    for (SGCountry *country in countries)
+    {
+        if ([country boundingBoxContainsCoordinate:coordinate])
+        {
+            possible_country = country;
+        }
+        else
+        {
+            continue;
+        }
+        
+        if ([country boundariesContainsCoordinate:coordinate])
+        {
+            return country;
+        }
+    }
+    return possible_country;
 }
 
 @end

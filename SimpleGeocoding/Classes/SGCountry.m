@@ -78,14 +78,9 @@
     return country;
 }
 
--(BOOL)containsCoordinate:(CLLocationCoordinate2D)coordinate
+-(BOOL)boundariesContainsCoordinate:(CLLocationCoordinate2D)coordinate
 {
     CGPoint point = CGPointMake(coordinate.longitude, coordinate.latitude);
-    if (!CGRectContainsPoint(boundingBox, point))
-    {
-        return NO;
-    }
-    
     for (UIBezierPath *path in self.polygons)
     {
         if ([path containsPoint:point])
@@ -96,22 +91,12 @@
     return NO;
 }
 
-+(SGCountry*)countryForCoordinate:(CLLocationCoordinate2D)coordinate
+-(BOOL)boundingBoxContainsCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    for (SGCountry *country in [self all])
-    {
-        if ([country containsCoordinate:coordinate])
-        {
-            return country;
-        }
-    }
-    return nil;
+    CGPoint point = CGPointMake(coordinate.longitude, coordinate.latitude);
+    return CGRectContainsPoint(boundingBox, point);
 }
 
-+(NSArray*)all
-{
-    return [SimpleGeocoding allCountries];
-}
 
 
 @end

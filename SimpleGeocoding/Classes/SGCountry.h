@@ -22,9 +22,9 @@
 @property (readonly,nonatomic) NSArray *polygons;
 @property (readonly,nonatomic) CGRect boundingBox;
 
--(BOOL)containsCoordinate:(CLLocationCoordinate2D)coordinate;
-+(SGCountry*)countryForCoordinate:(CLLocationCoordinate2D)coordinate;
+-(BOOL)boundariesContainsCoordinate:(CLLocationCoordinate2D)coordinate;
+-(BOOL)boundingBoxContainsCoordinate:(CLLocationCoordinate2D)coordinate;
 +(SGCountry*)countryWithCountryDict:(NSDictionary*)dictinary;
-+(NSArray*)all;
+
 
 @end
