@@ -24,7 +24,8 @@
 
 -(BOOL)boundariesContainsCoordinate:(CLLocationCoordinate2D)coordinate;
 -(BOOL)boundingBoxContainsCoordinate:(CLLocationCoordinate2D)coordinate;
-+(SGCountry*)countryWithCountryDict:(NSDictionary*)dictinary;
++(SGCountry*)countryWithCountryDict:(NSDictionary*)dictionary;
++(NSArray*)countriesFromDictionary:(NSDictionary*)dictionary;
 
 
 @end

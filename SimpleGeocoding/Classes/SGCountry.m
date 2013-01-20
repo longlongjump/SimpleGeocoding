@@ -71,6 +71,17 @@
     [self updateBoundingBox];
 }
 
++(NSArray*)countriesFromDictionary:(NSDictionary*)dictionary
+{
+    NSMutableArray *countries = [NSMutableArray array];
+    for (NSDictionary *country_dict in [dictionary objectForKey:@"features"])
+    {
+        SGCountry *country = [self countryWithCountryDict:country_dict];
+        [countries addObject:country];
+    }
+    return countries;
+}
+
 +(SGCountry*)countryWithCountryDict:(NSDictionary*)dictinary
 {
     SGCountry *country = [[SGCountry alloc] init];
@@ -94,7 +105,14 @@
 -(BOOL)boundingBoxContainsCoordinate:(CLLocationCoordinate2D)coordinate
 {
     CGPoint point = CGPointMake(coordinate.longitude, coordinate.latitude);
-    return CGRectContainsPoint(boundingBox, point);
+    for (UIBezierPath *path in self.polygons)
+    {
+        if (CGRectContainsPoint(path.bounds, point))
+        {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 

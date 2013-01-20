@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "SGCountry.h"
+#import "SGWorld.h"
+
+@class SGWorld;
 
 @interface SimpleGeocoding : NSObject
-+(SGCountry*) countryForCoordinate:(CLLocationCoordinate2D)coordinate;
-+(NSArray*)allCountries;
-
-+(void)initializeWithPath:(NSString*)path error:(NSError*)error;
++(SGWorld*)world;
 @end

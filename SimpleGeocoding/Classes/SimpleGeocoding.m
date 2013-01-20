@@ -28,31 +28,16 @@ static NSMutableArray *countries = nil;
     }
 }
 
-+(NSArray*)allCountries
++(SGWorld*)world
 {
-    return countries;
-}
-
-+(SGCountry*) countryForCoordinate:(CLLocationCoordinate2D)coordinate
-{
-    SGCountry *possible_country = nil;
-    for (SGCountry *country in countries)
-    {
-        if ([country boundingBoxContainsCoordinate:coordinate])
-        {
-            possible_country = country;
-        }
-        else
-        {
-            continue;
-        }
-        
-        if ([country boundariesContainsCoordinate:coordinate])
-        {
-            return country;
-        }
-    }
-    return possible_country;
+    static SGWorld *world;
+    static dispatch_once_t onceToken;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"world" ofType:@"bundle"];
+    dispatch_once(&onceToken, ^{
+        world = [[SGWorld alloc] initWithPath:path];
+    });
+    return world;
 }
 
 @end
