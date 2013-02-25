@@ -74,7 +74,7 @@ static CGRect rectFromFileName(NSString *filename)
     region_countries = [SGCountry countriesFromDictionary:region];
     
     [world_regions setObject:region_countries
-                      forKey:NSStringFromCGRect(rectFromFileName(region_file_path))];
+                      forKey:NSStringFromCGRect(rectFromFileName([region_file_path lastPathComponent]))];
     
     return region_countries;
 }
